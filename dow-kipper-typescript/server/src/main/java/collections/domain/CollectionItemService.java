@@ -5,10 +5,12 @@ import collections.data.CollectionRepository;
 import collections.data.ItemRepository;
 import collections.models.CollectionItem;
 import collections.models.Item;
+import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
 import java.util.List;
 
+@Service
 public class CollectionItemService {
     private final CollectionItemRepository repository;
     private final CollectionRepository collectionRepository;

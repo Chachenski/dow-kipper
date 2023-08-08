@@ -5,6 +5,8 @@ public class Credentials {
     private String username;
     private String password;
 
+//    private String role = "User"; implement this to assign admin
+
     public String getUsername() {
         return username;
     }

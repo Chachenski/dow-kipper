@@ -26,8 +26,7 @@ public class CollectionItemJdbcTemplateRepository implements CollectionItemRepos
     @Override
     @Transactional
     public boolean add(CollectionItem collectionItem) {
-        final String sql = "insert into collection_item (collection_id, item_id, is_sold, listed_price) " +
-                "where collection_id = ? and item_id = ?;";
+        final String sql = "insert into collection_item (collection_id, item_id, is_sold, listed_price) values(?, ?, ?, ?)";
 
         return jdbcTemplate.update( connection -> {
             PreparedStatement ps = connection.prepareStatement(sql);

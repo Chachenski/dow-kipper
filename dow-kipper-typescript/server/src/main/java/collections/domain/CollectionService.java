@@ -5,7 +5,6 @@ import collections.data.CollectionRepository;
 import collections.models.Collection;
 import collections.models.CollectionItem;
 import collections.models.Item;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;
@@ -15,7 +14,7 @@ import java.util.List;
 public class CollectionService {
     private final CollectionRepository collectionRepository;
     private final CollectionItemRepository collectionItemRepository;
-    @Autowired
+
     public CollectionService(CollectionRepository collectionRepository, CollectionItemRepository collectionItemRepository) {
         this.collectionRepository = collectionRepository;
         this.collectionItemRepository = collectionItemRepository;
@@ -44,8 +43,6 @@ public class CollectionService {
         }
 
         collection = collectionRepository.addCollection(collection);
-        BigDecimal collectionValue = getCollectionValue(collection.getId());
-        collection.setValue(collectionValue);
         result.setPayload(collection);
         return result;
     }
@@ -101,10 +98,6 @@ public class CollectionService {
 
         if (collection.getName() == null || collection.getName().trim().isEmpty()) {
             result.addMessage("Name is required", ResultType.INVALID);
-        }
-
-        if (collection.getValue().compareTo(BigDecimal.ZERO) < 0) {
-            result.addMessage("Value cannot be negative", ResultType.INVALID);
         }
 
         return result;

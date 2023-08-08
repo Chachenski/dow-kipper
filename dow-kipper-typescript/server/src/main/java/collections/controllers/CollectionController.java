@@ -1,11 +1,11 @@
 package collections.controllers;
 
-import collections.domain.CollectionItemService;
-import collections.domain.CollectionService;
-import collections.domain.Result;
-import collections.domain.ResultType;
+import collections.domain.*;
 import collections.models.Collection;
 import collections.models.CollectionItem;
+import collections.models.Item;
+import collections.security.AppUser;
+import collections.security.JwtConverter;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -14,7 +14,6 @@ import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = {"http://localhost:3000"})
 @RequestMapping("/api/collection")
 
 public class CollectionController {
@@ -22,9 +21,14 @@ public class CollectionController {
     private final CollectionService collectionService;
     private final CollectionItemService collectionItemService;
 
-    public CollectionController(CollectionService collectionService, CollectionItemService collectionItemService) {
+    private final ItemService itemService;
+    private final JwtConverter jwtConverter;
+
+    public CollectionController(CollectionService collectionService, CollectionItemService collectionItemService, ItemService itemService, JwtConverter jwtConverter) {
         this.collectionService = collectionService;
         this.collectionItemService = collectionItemService;
+        this.itemService = itemService;
+        this.jwtConverter = jwtConverter;
     }
 
     //get collections by userId
@@ -57,13 +61,35 @@ public class CollectionController {
 
     //add a new collection to system
     @PostMapping
-    public ResponseEntity<Object> addCollection(@RequestBody Collection collection) {
+    public ResponseEntity<Object> addCollection(@RequestBody Collection collection, @RequestHeader("Authorization") String token) {
+        AppUser user = jwtConverter.getUserFromToken(token);
+        collection.setUser(user);
+        collection.setValue(BigDecimal.ZERO);
         Result<Collection> result = collectionService.addCollection(collection);
         if (result.isSuccess()) {
             return new ResponseEntity<>(result.getPayload(), HttpStatus.CREATED);
         }
         return new ResponseEntity<> (result.getMessages(), HttpStatus.BAD_REQUEST);
     }
+
+    //add item to collection
+    @PostMapping("/item/{collectionId}/{itemId}")
+    public ResponseEntity<Object> addItemToCollection(@PathVariable int collectionId,@PathVariable int itemId, @RequestBody CollectionItem collectionItem){
+        Collection collection = collectionService.getCollectionById(collectionId);
+        Item item = itemService.findById(itemId);
+        collectionItem.setCollection(collection);
+        collectionItem.setItem(item);
+
+        if(collectionId != collectionItem.getCollection().getId() || itemId != collectionItem.getItem().getId()){
+            return new ResponseEntity<>(HttpStatus.CONFLICT);
+        }
+        Result<CollectionItem> result = collectionItemService.addItemToACollection(collectionItem);
+        if(result.isSuccess()) {
+            return new ResponseEntity<>(result.getPayload(),HttpStatus.CREATED);
+        }
+        return new ResponseEntity<>(result.getMessages(), HttpStatus.BAD_REQUEST);
+    }
+
     //update collection with provided collection ID
     @PutMapping("/{collectionId}")
     public ResponseEntity<Object> updateCollection(@PathVariable int collectionId, @RequestBody Collection collection) {
@@ -76,15 +102,6 @@ public class CollectionController {
             return new ResponseEntity<>(HttpStatus.NO_CONTENT);
         } else if(result.getResultType() == ResultType.NOT_FOUND) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-        }
-        return new ResponseEntity<>(result.getMessages(), HttpStatus.BAD_REQUEST);
-    }
-    //add item to collection
-    @PostMapping
-    public ResponseEntity<Object> addItemToCollection(@RequestBody CollectionItem collectionItem){
-        Result<CollectionItem> result = collectionItemService.addItemToACollection(collectionItem);
-        if(result.isSuccess()) {
-            return new ResponseEntity<>(result.getPayload(),HttpStatus.CREATED);
         }
         return new ResponseEntity<>(result.getMessages(), HttpStatus.BAD_REQUEST);
     }

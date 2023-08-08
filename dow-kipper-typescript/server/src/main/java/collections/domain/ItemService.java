@@ -4,7 +4,6 @@ import collections.data.CollectionItemRepository;
 import collections.data.ItemRepository;
 import collections.models.CollectionItem;
 import collections.models.Item;
-import org.springframework.security.core.parameters.P;
 import org.springframework.stereotype.Service;
 
 import java.math.BigDecimal;

@@ -5,49 +5,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7838361c-caee-4643-bcfa-4b02e79d80af" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../.idea/dow-kipper-typescript.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../client/node_modules/iconv-lite/.idea/iconv-lite.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/dml_production.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/dml_test.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/schema.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/sql/schema_test.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/AppConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/controllers/AuthController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/controllers/CollectionController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/controllers/GlobalExceptionHandler.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/controllers/ItemController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/AppUserJdbcTemplateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/AppUserRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/CollectionItemJdbcTemplateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/CollectionJdbcTemplateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/CollectionRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/ItemJdbcTemplateRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/ItemRepository.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/mappers/AppUserMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/mappers/CollectionItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/mappers/CollectionMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/data/mappers/ItemMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/domain/CollectionItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/domain/CollectionService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/domain/ItemService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/domain/Result.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/domain/ResultType.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/models/Collection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/models/Grade.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/models/Item.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/security/AppUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/security/AppUserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/security/Credentials.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/security/JwtConverter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/security/JwtRequestFilter.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/collections/security/SecurityConfig.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../Planning/Checklist.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../Planning/Checklist.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/dml_production.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/dml_production.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sql/schema.sql" beforeDir="false" afterPath="$PROJECT_DIR$/sql/schema.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/AppConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/AppConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/controllers/CollectionController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/controllers/CollectionController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/controllers/ItemController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/controllers/ItemController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/data/CollectionItemJdbcTemplateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/data/CollectionItemJdbcTemplateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/data/CollectionJdbcTemplateRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/data/CollectionJdbcTemplateRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/domain/CollectionItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/domain/CollectionItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/domain/CollectionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/domain/CollectionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/domain/ItemService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/domain/ItemService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/security/AppUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/security/AppUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/security/Credentials.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/security/Credentials.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/collections/security/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/collections/security/SecurityConfig.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,19 +41,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "development-ouyoung",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.11967778"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;development-chen&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/chachenski/Desktop/Capstone/dow-kipper-typescript/server&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.11967778&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <envs>
+        <env name="DB_PASSWORD" value="React123" />
+        <env name="DB_URL" value="jdbc:mysql://localhost:3306/collections" />
+        <env name="DB_USERNAME" value="root" />
+      </envs>
       <option name="MAIN_CLASS_NAME" value="collections.App" />
       <module name="videogames" />
       <extension name="coverage">
